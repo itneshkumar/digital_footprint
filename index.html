@@ -74,47 +74,64 @@
             </div>
 
             <div class="md:col-span-5 space-y-10 pt-4 md:pt-10">
-                <div>
-                    <h3 class="text-slate-500 text-xs font-bold uppercase tracking-[0.2em] mb-4">Multi-Agent Architecture</h3>
-                    <svg viewBox="0 0 440 200" class="w-full h-auto agent-graph" aria-hidden="true">
-                        <path class="agent-graph-line" d="M60,100 Q220,20 380,20" style="animation-delay:0.1s"/>
-                        <path class="agent-graph-line" d="M60,100 Q220,70 380,70" style="animation-delay:0.3s"/>
-                        <path class="agent-graph-line" d="M60,100 Q220,130 380,130" style="animation-delay:0.5s"/>
-                        <path class="agent-graph-line" d="M60,100 Q220,180 380,180" style="animation-delay:0.7s"/>
+                <div class="md:col-span-5 space-y-10 pt-4 md:pt-10">
+    <div>
+        <h3 class="text-slate-500 text-xs font-bold uppercase tracking-[0.2em] mb-4">Multi-Agent Architecture</h3>
+        <svg viewBox="0 0 460 220" class="w-full h-auto agent-graph" aria-hidden="true">
 
-                        <circle class="graph-packet" r="3">
-                            <animateMotion dur="2.6s" begin="1.6s" repeatCount="indefinite" path="M60,100 Q220,20 380,20"/>
-                        </circle>
-                        <circle class="graph-packet" r="3">
-                            <animateMotion dur="2.6s" begin="2s" repeatCount="indefinite" path="M60,100 Q220,70 380,70"/>
-                        </circle>
-                        <circle class="graph-packet" r="3">
-                            <animateMotion dur="2.6s" begin="2.4s" repeatCount="indefinite" path="M60,100 Q220,130 380,130"/>
-                        </circle>
-                        <circle class="graph-packet" r="3">
-                            <animateMotion dur="2.6s" begin="2.8s" repeatCount="indefinite" path="M60,100 Q220,180 380,180"/>
-                        </circle>
+            <!-- Connection lines: CORE → each agent -->
+            <path class="agent-graph-line" d="M70,110 Q240,30  390,30"  style="animation-delay:0.1s"/>
+            <path class="agent-graph-line" d="M70,110 Q240,75  390,75"  style="animation-delay:0.3s"/>
+            <path class="agent-graph-line" d="M70,110 Q240,110 390,110" style="animation-delay:0.5s"/>
+            <path class="agent-graph-line" d="M70,110 Q240,150 390,150" style="animation-delay:0.7s"/>
+            <path class="agent-graph-line" d="M70,110 Q240,190 390,190" style="animation-delay:0.9s"/>
 
-                        <circle class="graph-halo" cx="60" cy="100" r="10"/>
-                        <circle class="graph-node graph-node-center" cx="60" cy="100" r="9"/>
-                        <text class="graph-label" x="60" y="123" text-anchor="middle" style="animation-delay:0.4s">CORE</text>
+            <!-- Animated packets travelling along each path -->
+            <circle class="graph-packet" r="3">
+                <animateMotion dur="2.6s" begin="1.6s" repeatCount="indefinite"
+                    path="M70,110 Q240,30 390,30"/>
+            </circle>
+            <circle class="graph-packet" r="3">
+                <animateMotion dur="2.6s" begin="2.0s" repeatCount="indefinite"
+                    path="M70,110 Q240,75 390,75"/>
+            </circle>
+            <circle class="graph-packet" r="3">
+                <animateMotion dur="2.6s" begin="2.4s" repeatCount="indefinite"
+                    path="M70,110 Q240,110 390,110"/>
+            </circle>
+            <circle class="graph-packet" r="3">
+                <animateMotion dur="2.6s" begin="2.8s" repeatCount="indefinite"
+                    path="M70,110 Q240,150 390,150"/>
+            </circle>
+            <circle class="graph-packet" r="3">
+                <animateMotion dur="2.6s" begin="3.2s" repeatCount="indefinite"
+                    path="M70,110 Q240,190 390,190"/>
+            </circle>
 
-                        <circle class="graph-node" cx="380" cy="20" r="5" style="animation-delay:0.9s"/>
-                        <text class="graph-label" x="392" y="24" style="animation-delay:1.1s">RAG</text>
+            <!-- CORE node (centre-left) -->
+            <circle class="graph-halo"        cx="70" cy="110" r="10"/>
+            <circle class="graph-node graph-node-center" cx="70" cy="110" r="9"/>
+            <text   class="graph-label" x="70" y="134" text-anchor="middle"
+                style="animation-delay:0.4s">CORE</text>
 
-                        <circle class="graph-node" cx="380" cy="70" r="5" style="animation-delay:1.1s"/>
-                        <text class="graph-label" x="392" y="74" style="animation-delay:1.3s">LLM</text>
+            <!-- Agent nodes (right side, evenly spaced within viewBox) -->
+            <circle class="graph-node" cx="390" cy="30"  r="5" style="animation-delay:0.9s"/>
+            <text   class="graph-label" x="402" y="34"        style="animation-delay:1.1s">NLP</text>
 
-                        <circle class="graph-node" cx="380" cy="130" r="5" style="animation-delay:1.3s"/>
-                        <text class="graph-label" x="392" y="134" style="animation-delay:1.5s">VISION</text>
+            <circle class="graph-node" cx="390" cy="75"  r="5" style="animation-delay:1.1s"/>
+            <text   class="graph-label" x="402" y="79"        style="animation-delay:1.3s">RAG</text>
 
-                        <circle class="graph-node" cx="380" cy="180" r="5" style="animation-delay:1.5s"/>
-                        <text class="graph-label" x="392" y="184" style="animation-delay:1.7s">Agentic</text>
-                        
-                        <circle class="graph-node" cx="380" cy="0" r="5" style="animation-delay:.5s"/>
-                        <text class="graph-label" x="392" y="4" style="animation-delay:.7s">NLP</text>
-                    </svg>
-                </div>
+            <circle class="graph-node" cx="390" cy="110" r="5" style="animation-delay:1.3s"/>
+            <text   class="graph-label" x="402" y="114"       style="animation-delay:1.5s">LLM</text>
+
+            <circle class="graph-node" cx="390" cy="150" r="5" style="animation-delay:1.5s"/>
+            <text   class="graph-label" x="402" y="154"       style="animation-delay:1.7s">VISION</text>
+
+            <circle class="graph-node" cx="390" cy="190" r="5" style="animation-delay:1.7s"/>
+            <text   class="graph-label" x="402" y="194"       style="animation-delay:1.9s">Agentic</text>
+        </svg>
+    </div>
+</div>
 
                 <div>
                     <!-- Linked Heading -->
