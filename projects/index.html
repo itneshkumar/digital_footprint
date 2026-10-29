@@ -110,9 +110,16 @@
                     <span class="text-[10px] font-mono text-slate-500 uppercase">Pharma</span>
                 </div>
                 <h3 class="text-xl font-bold mb-3">Drug Synthesis Assistant — AstraZeneca</h3>
-                <p class="text-slate-400 text-sm leading-relaxed mb-6 flex-grow">4-agent orchestration engine for drug pathways. Leveraged Neo4j knowledge graphs and Jina semantic search for citation-backed clinical intelligence.</p>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6 flex-grow">Researchers spent hours piecing together gene markers, PubMed papers, and clinical-trial data before they could trust a drug recommendation. I built a 4-agent AutoGen + LangChain assistant on a hybrid RAG + Neo4j knowledge graph that delivers <strong class="text-slate-200">region-specific drug recommendations with clickable, traceable citations</strong>.</p>
+                <ul class="text-slate-400 text-sm space-y-1 mb-6 list-disc list-inside marker:text-slate-600">
+                    <li>Planner — breaks down biomedical queries and picks the tools</li>
+                    <li>Researcher — parallel retrieval and re-ranking across Kendra, S3, SerpAPI, Jina, Neo4j</li>
+                    <li>Summarizer — citation-backed answers</li>
+                    <li>Reviewer — validates grounding and answer quality</li>
+                    <li>Automated checks for relevance, links, and chunk traceability</li>
+                </ul>
                 <div class="flex flex-wrap gap-2">
-                    <span class="stack-pill">AutoGen</span><span class="stack-pill">Neo4j</span><span class="stack-pill">LangChain</span><span class="stack-pill">Jina</span>
+                    <span class="stack-pill">AutoGen</span><span class="stack-pill">LangChain</span><span class="stack-pill">Neo4j</span><span class="stack-pill">Amazon Kendra</span><span class="stack-pill">Jina</span><span class="stack-pill">FastAPI</span><span class="stack-pill">MCP</span>
                 </div>
             </div>
 
