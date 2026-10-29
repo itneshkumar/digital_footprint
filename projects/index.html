@@ -91,7 +91,14 @@
                     <span class="text-[10px] font-mono text-slate-500 uppercase">Healthcare</span>
                 </div>
                 <h3 class="text-xl font-bold mb-3">Healthcare Claim Adjudication — Optum</h3>
-                <p class="text-slate-400 text-sm leading-relaxed mb-6 flex-grow">Designed a multi-agent orchestration system using CrewAI to automate claim categorisation. Integrated NCCI rules and anomaly detection. <strong class="text-slate-200">98.5% accuracy</strong> on 500K+ monthly claims.</p>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6 flex-grow">Manual claim review was slow and inconsistent, and a wrong call meant compliance risk or lost revenue. I migrated legacy agents to a scalable CrewAI system with updated NCCI rules that sorts every claim into <strong class="text-slate-200">Autopay, Review, or Deny</strong>, reaching <strong class="text-slate-200">98.5% accuracy</strong> on 500K+ monthly claims with every decision explained.</p>
+                <ul class="text-slate-400 text-sm space-y-1 mb-6 list-disc list-inside marker:text-slate-600">
+                    <li>Duplicate claim detector</li>
+                    <li>Pricing validator — quantile-based anomaly checks</li>
+                    <li>Procedural order validator</li>
+                    <li>Policy coding compliance agent</li>
+                    <li>Guardrails for explainable decisions</li>
+                </ul>
                 <div class="flex flex-wrap gap-2">
                     <span class="stack-pill">CrewAI</span><span class="stack-pill">GPT-4o</span><span class="stack-pill">Docker</span><span class="stack-pill">FastAPI</span>
                 </div>
